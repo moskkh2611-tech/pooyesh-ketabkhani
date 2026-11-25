@@ -1,9 +1,9 @@
-Build Pooyesh Ketabkhani APK
 name: Build Android APK
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -43,5 +43,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: ketabkhani-android-apk
+          name: ketabkhani-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
